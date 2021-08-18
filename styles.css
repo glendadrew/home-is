@@ -1,30 +1,28 @@
-body{
+body {
     font-family: 'Kingthings Xstitch', sans-serif;
-    color: #2f2f2f ;
+    color: #2f2f2f;
 }
 
-#container{
+#container {
     width: 100vw;
     height: 100vh;
-   
 }
 
 .home-div {
     overflow: hidden;
 }
 
-.header-div{
+.header-div {
     width: 100vw;
     position: absolute;
-    top:0;
+    top: 0;
     z-index: 1;
-    
-
 }
 
 a {
     color: #2f2f2f;
 }
+
 
 /* .view-display {
     display: none;
@@ -34,8 +32,10 @@ a {
     display: flex;
 } */
 
+
 /* Landing Page */
-#welcome-overlay{
+
+#welcome-overlay {
     width: 100%;
     height: 100%;
     background-color: rgba(47, 47, 47, 0.6);
@@ -45,10 +45,9 @@ a {
     justify-content: center;
     align-items: center;
     z-index: 1;
-
 }
 
-#welcome-overlay section{
+#welcome-overlay section {
     width: 80vw;
     height: 95vh;
     padding: 0 8%;
@@ -60,10 +59,10 @@ a {
     overflow-y: scroll;
     overflow-x: hidden;
     z-index: 0;
-
 }
 
-#welcome-overlay section > img{
+#welcome-overlay section>img {
+    /* glenda: why 135% */
     width: 135%;
     max-width: 900px;
     position: absolute;
@@ -74,25 +73,25 @@ a {
     z-index: -1;
 }
 
-#welcome-overlay section > img:last-of-type, 
-header nav, #nav-close, 
-header form, 
-#container > img,
-#tile-overlay > img {
+#welcome-overlay section>img:last-of-type,
+header nav,
+#nav-close,
+header form,
+#container>img,
+#tile-overlay>img {
     display: none;
 }
 
-#welcome-overlay section div > img {
+#welcome-overlay section div>img {
     width: 100%;
     margin-top: 50px;
 }
 
-
-#welcome-overlay p{
+#welcome-overlay p {
     margin: 10px 0;
 }
 
-#welcome-btns{
+#welcome-btns {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -100,24 +99,26 @@ header form,
     margin-top: 50px;
 }
 
-#welcome-overlay button{
+#welcome-overlay button {
     width: 270px;
     height: 70px;
     margin: 15px auto;
     position: relative;
     border: none;
     font-size: 30px;
-    color:#fdfdfd;
+    color: #fdfdfd;
 }
 
-#welcome-overlay button:first-of-type{
-    background-color:#4e60aa;
-}
-#welcome-overlay button:last-child{
-    background-color:#cc4999;
+#welcome-overlay button:first-of-type {
+    background-color: #4e60aa;
 }
 
-#welcome-overlay button a, header nav li a{
+#welcome-overlay button:last-child {
+    background-color: #cc4999;
+}
+
+#welcome-overlay button a,
+header nav li a {
     text-decoration: none;
 }
 
@@ -126,20 +127,21 @@ header form,
     height: 50%;
 }
 
-header{
+header {
     width: 100%;
-    height: 15vh;  
+    height: 15vh;
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     display: flex;
-    justify-content: space-around; /*used to be center*/
+    justify-content: space-around;
+    /*used to be center*/
     align-content: center;
     flex-wrap: wrap;
     background-color: white;
     box-shadow: 0 5px 10px rgba(47, 47, 47, 0.6);
-    z-index: 1; /*0*/
-    
+    z-index: 1;
+    /*0*/
 }
 
 header a {
@@ -149,20 +151,23 @@ header a {
     /* max-height: 40%; */
 }
 
+
 /* Home is logo */
+
 header a img {
-    width: 70vw;
+    /* glenda commented out */
+    /* width: 70vw;
     height: 100%;
     max-height: 115px;
-    max-width: 480px;
-   
+    max-width: 480px; */
 }
-header button:first-of-type img{
+
+header button:first-of-type img {
     width: 100%;
     margin: auto;
 }
 
-header button:first-of-type img, 
+header button:first-of-type img,
 #welcome-overlay section div button img {
     position: absolute;
     top: 50%;
@@ -182,7 +187,6 @@ header button {
     font-size: 40px;
     border: none;
     background-color: #fdfdfd;
-    
 }
 
 header nav {
@@ -193,61 +197,59 @@ header nav ul {
     padding-left: 5%;
 }
 
-header nav li{
+header nav li {
     height: 6vh;
     padding: 20px 0;
     list-style-type: none;
     border-bottom: 1px solid black;
 }
 
-header nav li a{
-    color: #2f2f2f ;
+header nav li a {
+    color: #2f2f2f;
 }
 
-header nav li a img{
-   width: auto;
-   /* height: 100%; */
+header nav li a img {
+    width: auto;
+    /* height: 100%; */
 }
 
-
-main{
+main {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     margin-top: 15vh;
-    z-index: 0; /*-1*/
+    z-index: 0;
+    /*-1*/
 }
 
-main img{
+main img {
     width: 50%;
     height: auto;
 }
 
-#zoom-btns{
+#zoom-btns {
     position: fixed;
     bottom: 20px;
     right: 20px;
     display: flex;
     flex-direction: column;
-   
 }
 
-#zoom-btns button{
+#zoom-btns button {
     width: 30px;
     height: 30px;
     font-size: 2em;
     border: none;
-    background-color:rgba(253, 253, 253, 0.85);
+    background-color: rgba(253, 253, 253, 0.85);
     box-shadow: 0 0 8px rgba(47, 47, 47, 0.4);
     position: relative;
-    
-    
 }
-#zoom-btns button:first-of-type{
+
+#zoom-btns button:first-of-type {
     margin-bottom: 5px;
 }
 
-#zoom-btns button i{
+#zoom-btns button i {
     font-size: 0.7em;
     opacity: 0.5;
     position: absolute;
@@ -256,17 +258,18 @@ main img{
     transform: translate(-50%, -50%);
 }
 
-#tile-overlay{
+#tile-overlay {
     width: 100vw;
     position: fixed;
-    top: 15vh; /*125px*/
+    top: 15vh;
+    /*125px*/
     bottom: 0;
     justify-content: center;
     background-color: rgba(47, 47, 47, 0.6);
     display: none;
 }
 
-#tile-overlay button{
+#tile-overlay button {
     width: 20%;
     position: absolute;
     top: 10px;
@@ -276,34 +279,38 @@ main img{
     border: none;
 }
 
-#tile-overlay button img{
+#tile-overlay button img {
     width: 100%;
     max-width: 90px;
 }
 
-#tile-overlay figure{
+#tile-overlay figure {
     height: 50%;
     margin: 30px 20px;
     align-self: center;
 }
 
-#tile-overlay figure img{
+#tile-overlay figure img {
     height: 100%;
 }
 
-
-#container > a {
+#container>a {
     display: none;
 }
 
+
 /* About / Team Page Mobile*/
-#about-main, #team-main, #contact-main {
+
+#about-main,
+#team-main,
+#contact-main {
     margin-left: 8%;
     margin-right: 8%;
-    
 }
 
-#about-main div, #team-main div, #contact-main div {
+#about-main div,
+#team-main div,
+#contact-main div {
     width: 70vw;
     height: 15vh;
     margin-bottom: 1em;
@@ -314,25 +321,30 @@ main img{
     margin-bottom: 2em;
 }
 
-#about-main div img, #team-main div img, #contact-main div img {
+#about-main div img,
+#team-main div img,
+#contact-main div img {
     height: 40%;
     width: auto;
     margin-top: 4em;
 }
 
+
 /* About Page Mobile */
+
 #about-main p {
     font-size: 1.2em;
     line-height: 1.5em;
     margin-bottom: 0;
 }
 
-#about-main p:last-of-type{
+#about-main p:last-of-type {
     margin-bottom: 5vh;
 }
 
 
 /* Team Page Mobile */
+
 #team-main {
     justify-content: space-between;
 }
@@ -342,7 +354,6 @@ main img{
     margin: 0 0 2.2em 0;
 }
 
-
 #team-main figure img {
     width: 100%;
 }
@@ -351,11 +362,13 @@ main img{
     margin-top: 0.7em;
 }
 
-#team-overlay{
+#team-overlay {
     width: 100vw;
-    height: 100vh; /*710px*/
+    height: 100vh;
+    /*710px*/
     position: fixed;
-    top: 0; /*125px*/
+    top: 0;
+    /*125px*/
     background-color: rgba(47, 47, 47, 0.6);
     display: none;
     z-index: 2;
@@ -371,29 +384,27 @@ main img{
     left: 50%;
     transform: translate(-50%, -50%);
     overflow: scroll;
-    
 }
 
-#team-overlay section h3, #team-overlay section p{
+#team-overlay section h3,
+#team-overlay section p {
     width: 80%;
     margin: 25px auto;
     line-height: 1.5em;
-
 }
 
 #team-overlay section img {
     width: 50%;
-    
 }
 
-#team-overlay section > img {
+#team-overlay section>img {
     display: block;
     padding-top: 10vh;
     margin-left: auto;
     margin-right: auto;
 }
 
-#team-overlay section button{
+#team-overlay section button {
     width: 70px;
     margin-right: 0;
     position: absolute;
@@ -403,8 +414,11 @@ main img{
     border: none;
 }
 
+
 /* CONTACT PAGE */
-#contact-main form input, #contact-main form label {
+
+#contact-main form input,
+#contact-main form label {
     display: block;
 }
 
@@ -418,20 +432,20 @@ main img{
     margin-bottom: 10px;
 }
 
-#contact-main form input{
+#contact-main form input {
     height: 7%;
 }
 
-#contact-main form input,  #contact-main form textarea{
+#contact-main form input,
+#contact-main form textarea {
     width: 100%;
     margin-bottom: 30px;
     border: none;
     background-color: white;
     box-shadow: 0 3px 8px rgba(47, 47, 47, 0.3);
-    
 }
 
-#contact-main form input:last-of-type{
+#contact-main form input:last-of-type {
     width: 70%;
     height: 10%;
     font-size: 2em;
@@ -439,58 +453,50 @@ main img{
     background-color: #4B5FAA;
     text-transform: uppercase;
     box-shadow: none;
-
 }
 
-header img, 
+header img,
 button,
 main img {
     cursor: pointer;
 }
 
+
 /**** TABLET VIEW ****/
+
 @media only screen and (min-width: 700px) {
-    header button{
+    header button {
         width: 10%;
         max-width: 100px;
         margin: 0;
     }
-
-    header button img{
+    header button img {
         width: 100%;
     }
-
-   /*  header a {
+    /*  header a {
         max-height: 115px;
         max-width: 480px;
     } */
-
-    header a img{
+    header a img {
         width: 100%;
     }
-
     header nav ul {
         padding-left: 13%;
     }
-
-    header nav ul li{
+    header nav ul li {
         height: 8.5vh;
     }
-
     #tile-overlay button {
         width: 12%;
     }
-
     #tile-overlay figure {
         height: 70%;
         max-height: 70%;
     }
-
     #zoom-btns button {
         width: 50px;
         height: 50px;
     }
-
     #zoom-btns button i {
         font-size: 1em;
     }
@@ -498,20 +504,18 @@ main img {
 
 
 /**** DESKTOP VIEW ****/
-@media only screen and (min-width: 1300px) {
 
+@media only screen and (min-width: 1300px) {
     #welcome-overlay section {
         width: 100vw;
         height: 70vh;
         padding: 0 1%;
         flex-direction: row;
     }
-
-    #welcome-overlay section > div {
+    #welcome-overlay section>div {
         padding: 0 5%;
     }
-
-    #welcome-overlay section > img{
+    #welcome-overlay section>img {
         width: initial;
         height: 70%;
         position: initial;
@@ -521,23 +525,19 @@ main img {
         align-self: center;
         opacity: 1;
     }
-
-    #welcome-overlay section > img:last-of-type{
+    #welcome-overlay section>img:last-of-type {
         display: block;
     }
-
     #welcome-overlay section div img {
         width: 70%;
         margin-left: auto;
         margin-right: auto;
         display: block;
     }
-
-    #welcome-btns{
+    #welcome-btns {
         flex-wrap: nowrap;
         margin-top: 0;
     }
-
     header {
         width: 40vw;
         height: 10vh;
@@ -549,16 +549,13 @@ main img {
         box-shadow: none;
         transition: top 0.2s ease-in-out;
     }
-
     header a {
         width: auto;
     }
-
-    header > a img{
+    header>a img {
         display: none;
     }
-
-    header > button:first-of-type {
+    header>button:first-of-type {
         width: 10vh;
         height: 7vh;
         padding: 1px 15px;
@@ -567,7 +564,6 @@ main img {
         align-self: flex-start;
         box-shadow: 0 5px 10px rgba(47, 47, 47, 0.6)
     }
-
     header button:last-of-type {
         width: 70px;
         margin-right: 0;
@@ -575,59 +571,45 @@ main img {
         top: 10px;
         right: 0;
     }
-
-    header button:first-of-type img{
+    header button:first-of-type img {
         width: 65%;
     }
-
     header nav {
         width: 70%;
     }
-
     header nav ul {
         padding-left: 2%;
     }
-
-
-    #container > a, #container > img {
+    #container>a,
+    #container>img {
         display: block;
         position: fixed;
         bottom: 0;
         left: 0;
-       
     }
-
     #homeis-sticker-tiles {
         width: 20%;
         height: auto;
     }
-
     #homeis-sticker {
         width: 15vw;
         height: 15vw;
-       
-       
     }
-   
-    main{
+    main {
         width: 100vw;
         margin-top: 0;
     }
-
-    main img{
+    main img {
         width: 20%;
     }
-
-    #zoom-btns button{
+    #zoom-btns button {
         width: 40px;
         height: 40px;
     }
-
-    #zoom-btns button:first-of-type{
+    #zoom-btns button:first-of-type {
         margin-bottom: 3px;
     }
-
-    #tile-overlay{
+    #tile-overlay {
         margin-top: 0;
         display: none;
         top: 0;
@@ -635,83 +617,70 @@ main img {
         align-items: center;
         z-index: 2;
     }
-
     #tile-overlay figure {
         width: initial;
         height: initial;
         max-height: initial;
         margin: 0 10%;
     }
-
     #tile-overlay figure img {
         height: 80vh;
         width: auto;
     }
-
-    #tile-overlay > img { /* arrow imgs*/
+    #tile-overlay>img {
+        /* arrow imgs*/
         display: block;
-    
     }
-
     #tile-overlay button {
         width: 7%;
     }
-
     #tile-overlay button img {
         width: 80%;
     }
-
     /* About Page / Team Page Desktop*/
-    #about-main, #team-main, #contact-main {
+    #about-main,
+    #team-main,
+    #contact-main {
         width: 60vw;
         margin: 0 auto;
     }
-
-    #about-main div, #team-main div, #contact-main div {
+    #about-main div,
+    #team-main div,
+    #contact-main div {
         margin-right: 50%;
         border: none;
     }
-    
-    
-    #about-main div img, #team-main div img, #contact-main div img {
+    #about-main div img,
+    #team-main div img,
+    #contact-main div img {
         height: 70%;
         margin-top: 1.8em;
     }
-    
-
     /* Team Page Desktop*/
     #team-main h1 {
         width: 100%;
     }
-
     #team-main figure {
         width: 30%;
         margin-bottom: 4em;
     }
-
     #team-main figure figcaption {
         font-size: 1.2em;
     }
-
     #team-overlay section {
         width: 40vw;
         font-size: 1.2em;
     }
-
-
-    #team-overlay section button{
+    #team-overlay section button {
         width: 100px;
     }
-
     /* Contact Page Desktop*/
-    #contact-main p{
+    #contact-main p {
         font-size: 1.2em;
         margin-bottom: 25px;
         color: rgba(47, 47, 47, 0.7);
     }
-
-    #contact-main form input:last-of-type{
+    #contact-main form input:last-of-type {
         width: 25%;
     }
 }
-
