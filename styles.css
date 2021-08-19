@@ -1,7 +1,8 @@
-/* glenda added to disable the weird double click */
-
 * {
+    /* glenda added to disable the weird double click */
     touch-action: manipulation;
+    /* box sizing so no horizontal scroll */
+    box-sizing: border-box;
 }
 
 body {
@@ -594,7 +595,7 @@ main img {
         left: 0;
     }
     #homeis-sticker-tiles {
-        width: 20%;
+        width: 20vw;
         height: auto;
     }
     #homeis-sticker {

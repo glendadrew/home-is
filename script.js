@@ -334,12 +334,12 @@
                 imgTags.forEach(function(eachImg) {
                     eachImg.style.width = '16.66%';
                 })
-                qrSticker.style.width = '16.66%';
+                qrSticker.style.width = '16.66vw';
             } else if (imgInfo.width <= window.innerWidth / 6) {
                 imgTags.forEach(function(eachImg) {
                     eachImg.style.width = '20%';
                 })
-                qrSticker.style.width = '20%';
+                qrSticker.style.width = '20vw';
             }
         }
     }
@@ -363,12 +363,12 @@
                 imgTags.forEach(function(eachImg) {
                     eachImg.style.width = '14.28%';
                 })
-                qrSticker.style.width = '14.28%';
+                qrSticker.style.width = '14.28vw';
             } else if (imgInfo.width = window.innerWidth / 5) {
                 imgTags.forEach(function(eachImg) {
                     eachImg.style.width = '16.66%';
                 })
-                qrSticker.style.width = '16.66%';
+                qrSticker.style.width = '16.66vw';
             }
         }
 
