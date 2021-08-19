@@ -14,8 +14,8 @@
     const tileOverlay = document.querySelector('#tile-overlay');
     const tileImg = document.querySelector("#tile-overlay figure img");
     const zoomBtns = document.querySelectorAll('#zoom-btns button');
-    const zoomOutBtn = zoomBtns[0];
-    const zoomInBtn = zoomBtns[1];
+    const zoomOutBtn = zoomBtns[1];
+    const zoomInBtn = zoomBtns[0];
     const closeBtn = document.querySelector('#tile-overlay button');
     const listElements = document.querySelectorAll('header nav li');
     const navCloseBtn = document.querySelector('#nav-close');
