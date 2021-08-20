@@ -19,7 +19,7 @@
     const closeBtn = document.querySelector('#tile-overlay button');
     const listElements = document.querySelectorAll('header nav li');
     const navCloseBtn = document.querySelector('#nav-close');
-    const qrSticker = document.querySelector('#homeis-logo-tiles');
+    const qrSticker = document.querySelector('#container > img');
     const containerDiv = document.querySelector('#container');
     const leftArrow = document.querySelectorAll('#tile-overlay > img')[0];
     const rightArrow = document.querySelectorAll('#tile-overlay > img')[1];
@@ -31,11 +31,19 @@
 
     const welcomeOverlay = document.querySelector('#welcome-overlay');
 
+    // const navLis = document.querySelectorAll('nav li');
+    /* const homeIsLink = navLis[0];
+    const viewLink = navLis[1]; */
+
+
     let imgTags;
     let imgInfo;
     let currentImage;
     let scrollValue = window.scrollY;
-   
+    /* let loaded = false; */
+
+    /* let headerHeight;
+    let qrStickerHeight; */
 
     const teamName = [
         'Ama Dadzie, Student Researcher',
@@ -85,15 +93,27 @@
 
     window.addEventListener('load', function() {
         navBtn.addEventListener('click', showNavMenu);
-       
+        /*  viewLink.addEventListener('click', function(){
+             welcomeOverlay.className = 'view-display';
+         })
+         homeIsLink.addEventListener('click', function(){
+            welcomeOverlay.className = 'landing-display';
+        }) */
+
+
         if (mainTag.className == 'tiles') { /* TILES PAGE */
+
+            /* if(!loaded) {
+                 welcomeOverlay.className = 'landing-display';
+            } */
             if (welcomeOverlay) {
                 welcomeViewBtn.addEventListener('click', function() {
                     location.href = "tiles.html";
                     const welcomeOverlay = document.querySelector('#welcome-overlay');
                     welcomeOverlay.style.display = 'none';
                     containerDiv.style.overflow = 'initial';
-                    
+                    /* loaded = true;
+                    welcomeOverlay.className = 'view-display'; */
                 })
 
                 welcomeParticipateBtn.addEventListener('click', function() {
@@ -157,24 +177,29 @@
 
     /* Show Navigation menu */
     function showNavMenu() {
+
         navMenu.style.display = 'flex';
         headerDiv.style.backgroundColor = 'rgba(47, 47, 47, 0.6)';
         headerDiv.style.height = '100vh';
-        headerDiv.style.width = '100vw';
         headerTag.style.height = '100vh';
         containerDiv.style.overflow = 'hidden';
 
-        if (window.innerWidth < 1366) {
+        if (window.innerWidth < 1300) {
             headerTag.style.paddingTop = `calc((15vh - ${parseInt(homeIsLogo.height)}px) / 2` //'50px';     calc((15vh - 48px) / 2)
             headerTag.style.alignContent = 'flex-start';
-            document.querySelector('header nav ul li').style.display = 'none';
+
 
         } else {
             headerTag.style.display = 'block';
             headerTag.style.width = '50vw';
             headerTag.style.backgroundColor = '#fdfdfd';
             headerTag.style.padding = '0';
-            navBtn.style.display = 'none'
+
+            listElements.forEach(function(eachListEl) {
+                eachListEl.style.fontSize = '3.2em';
+            })
+
+            navBtn.style.marginLeft = '0';
             navCloseBtn.style.display = 'block';
 
         }
@@ -200,26 +225,20 @@
         navBtn.addEventListener('click', showNavMenu);
         containerDiv.style.overflow = 'initial';
 
-        if (window.innerWidth < 1366) {
+        if (window.innerWidth < 1300) {
             headerTag.style.height = '15vh';
             headerTag.style.paddingTop = '0';
             headerTag.style.alignContent = 'center';
-            document.querySelector('header nav ul li').style.display = 'flex';
         } else {
             headerTag.style.display = 'flex';
-            headerTag.style.width = 'initial';
-            headerTag.style.height = 'initial';
             headerTag.style.backgroundColor = 'transparent';
-            // headerTag.style.width = '40%';
+            headerTag.style.width = '40%';
             headerTag.style.padding = '30px 0 0 30px';
-            headerDiv.style.width = 'fit-content';
-            headerDiv.style.height = 'fit-content';
-            navBtn.style.display = 'flex';
             //    turn on hamburger menu
         }
 
         headerDiv.style.backgroundColor = 'transparent';
-        // headerDiv.style.height = 'auto';
+        headerDiv.style.height = 'auto';
 
         navCloseBtn.style.display = 'none';
         headerDiv.removeEventListener('click', hideNavMenu);
@@ -269,15 +288,12 @@
 
     /* Show tile overlay */
     function showTileOverlay(img, num) {
-        if (window.innerWidth < 1366) {
+        if (window.innerWidth < 1300) {
             if (headerTag.style.marginTop == '0px' || window.scrollY < 125) {
                 tileOverlay.style.top = '15vh';
-                // document.querySelector('#tile-overlay figure').style.maxHeight = '50%';
             } else {
                 tileOverlay.style.top = '0';
-                // document.querySelector('#tile-overlay figure').style.maxHeight = '40%';
             }
-            
         }
         currentImage = num;
         tileImg.src = img.src;
@@ -303,17 +319,15 @@
     function zoomIn() {
         getImgInfo()
 
-        if (window.innerWidth < 1366) {
+        if (window.innerWidth < 1300) {
             if (imgInfo.width >= window.innerWidth / 2) {
                 imgTags.forEach(function(eachImg) {
                     eachImg.style.width = '100%';
                 })
-                zoomInBtn.style.backgroundColor = 'rgba(128, 128, 128, 0.8);';
             } else if (imgInfo.width <= window.innerWidth / 3) {
                 imgTags.forEach(function(eachImg) {
                     eachImg.style.width = '50%';
                 })
-                zoomOutBtn.style.backgroundColor = 'rgba(253, 253, 253, 0.85)';
             }
         } else {
             if (imgInfo.width <= window.innerWidth / 7) {
@@ -321,13 +335,11 @@
                     eachImg.style.width = '16.66%';
                 })
                 qrSticker.style.width = '16.66vw';
-                zoomOutBtn.style.backgroundColor = 'rgba(253, 253, 253, 0.85)';
             } else if (imgInfo.width <= window.innerWidth / 6) {
                 imgTags.forEach(function(eachImg) {
                     eachImg.style.width = '20%';
                 })
-                qrSticker.style.width = '20%';
-                zoomInBtn.style.backgroundColor = 'rgba(128, 128, 128, 0.8)';
+                qrSticker.style.width = '20vw';
             }
         }
     }
@@ -335,17 +347,16 @@
     function zoomOut() {
         getImgInfo()
 
-        if (window.innerWidth < 1366) {
+        if (window.innerWidth < 1300) {
             if (imgInfo.width <= window.innerWidth / 2) {
+                console.log("in zoom out 33%")
                 imgTags.forEach(function(eachImg) {
                     eachImg.style.width = '33.33%'
                 })
-                zoomOutBtn.style.backgroundColor = 'rgba(128, 128, 128, 0.8)';
             } else if (imgInfo.width = window.innerWidth) {
                 imgTags.forEach(function(eachImg) {
                     eachImg.style.width = '50%'
                 })
-                zoomInBtn.style.backgroundColor = 'rgba(253, 253, 253, 0.85)';
             }
         } else {
             if (imgInfo.width <= window.innerWidth / 6) {
@@ -353,13 +364,11 @@
                     eachImg.style.width = '14.28%';
                 })
                 qrSticker.style.width = '14.28vw';
-                zoomOutBtn.style.backgroundColor = 'rgba(128, 128, 128, 0.8)';
             } else if (imgInfo.width = window.innerWidth / 5) {
                 imgTags.forEach(function(eachImg) {
                     eachImg.style.width = '16.66%';
                 })
-                qrSticker.style.width = '16.66%';
-                zoomInBtn.style.backgroundColor = 'rgba(253, 253, 253, 0.85)';
+                qrSticker.style.width = '16.66vw';
             }
         }
 

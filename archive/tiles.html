@@ -10,32 +10,19 @@
     <link type="text/css" href="styles.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
     <script src="script.js" defer></script>
-    <title>Home is ___ </title>
+    <title>Home Is / View</title>
 </head>
 
 <body>
-    <!-- glenda questions / updates: 
-        Update logo to "Home is ___" (DONE)
-        Zoom buttons: Gray out buttons when not available? (DONE)
-        Mobile: Don't scale the logo (max-width no larger than actual image) (DONE)
-        Adding mx-width to paragraph text so not too many words per line (DONE)
-        Sometimes hamburger menu looks pixelated? (max-width no larger than actual image) (DONE)
-        Desktop: Bug after closing hamburger menu: tiles not clickable (DONE)
-        Desktop: Hide hamburger menu when menu is open, only show the close  (DONE)
-        Update contact href (FOR MIKAELA)
-        Index: Home is logo button shoud show welcome overlay (DONE)
-        New bird and nest graphics 
-    -->
-    <div id="container" class="home-div">
+    <div id="container">
         <div class="header-div">
             <header>
 
-                <a href="index.html"><img src="images/homeistext.png" alt="home is logo"></a>
+                <a href="index.html"><img src="images/homeislogo.png" alt="home is logo"></a>
                 <button id="nav"><img src="images/menu-bar.png" alt="menu bar"></i></button>
                 <nav>
                     <ul>
                         <li>
-                            <!-- glenda: change this to "welcome"? -->
                             <a href="index.html"><img src="images/homeis-nav.png"></a>
                         </li>
                         <li>
@@ -53,6 +40,7 @@
                         <li>
                             <a href="contact.html"><img src="images/contact-nav.png" alt="contact text"></a>
                         </li>
+                    </ul>
                 </nav>
 
                 <button id="nav-close"><img src="images/close-btn-black.png" alt="close button"></button>
@@ -90,41 +78,23 @@
 
 
             <div id="zoom-btns">
-                <button><i class="fas fa-minus"></i></button>
                 <button><i class="fas fa-plus"></i></button>
+                <button><i class="fas fa-minus"></i></button>
             </div>
 
         </main>
-
-        <img src="images/logo.gif" alt="qr code" id="homeis-sticker-tiles">
-        <section id="tile-overlay">
-            <button><img src="images/clsoe-btn-cross.png" alt="x button"></i></button>
-            <img src="images/left-arrow-cross.png">
-            <figure>
-                <img src="images/tile-028.gif">
-            </figure>
-            <img src="images/right-arrow-cross.png">
+        <!-- glenda addded link back to index -->
+        <a href="index.html"><img src="images/logo.gif" alt="qr code" id="homeis-sticker-tiles">
+            <section id="tile-overlay">
+        </a>
+        <button><img src="images/clsoe-btn-cross.png" alt="x button"></i></button>
+        <img src="images/left-arrow-cross.png">
+        <figure>
+            <img src="images/tile-028.gif">
+        </figure>
+        <img src="images/right-arrow-cross.png">
 
         </section>
-        <div id="welcome-overlay" class="view-display">
-            <section>
-                <img src="images/bird.gif" alt="bird">
-                <div>
-                    <img src="images/homeistext.png" alt="home is logo">
-                    <p>Is home where we are born or where we live? Is home a right or is it earned? Is home a place or is it the people we live with or is it a certain relationship to nature? </p>
-                    <p> We live on stolen land, the home of many Indigenous communities. During this tumultuous year in which we have seen social and racial inequality laid bare, many of our relationships to home have been questioned and rethought. </p>
-                    <p>As we continue to question what home is we are seeking your creative responses.</p>
-                    <p>We are inviting contributions that we will share over the coming months. The prompt is simple: Fill in the blank, provide a longer response or upload an image to answer the question “Home is ____”.</p>
-                    <p>Thank you for participating!</p>
-                    <div id="welcome-btns">
-                        <button id="participate-btn"><img src="images/participate-welcome.png"></a></button>
-                        <button id="view-btn"><img src="images/view-welcome.png"></button>
-                    </div>
-                </div>
-                <img src="images/bird-nest.gif" alt="birds nest">
-            </section>
-
-        </div>
     </div>
 </body>
 

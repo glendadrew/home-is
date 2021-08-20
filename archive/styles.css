@@ -2,7 +2,7 @@
     /* glenda added to disable the weird double click */
     touch-action: manipulation;
     /* box sizing so no horizontal scroll */
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 body {
@@ -29,6 +29,15 @@ body {
 a {
     color: #2f2f2f;
 }
+
+
+/* .view-display {
+    display: none;
+}
+
+.landing-display {
+    display: flex;
+} */
 
 
 /* Landing Page */
@@ -60,6 +69,8 @@ a {
 }
 
 #welcome-overlay section>img {
+    /* glenda: why 135% */
+    width: 135%;
     max-width: 900px;
     position: absolute;
     left: 50%;
@@ -80,13 +91,11 @@ header form,
 
 #welcome-overlay section div>img {
     width: 100%;
-    max-width: 489px;
     margin-top: 50px;
 }
 
 #welcome-overlay p {
     margin: 10px 0;
-    max-width: 684px;
 }
 
 #welcome-btns {
@@ -94,7 +103,7 @@ header form,
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0;
-    margin-top: 25px;
+    margin-top: 50px;
 }
 
 #welcome-overlay button {
@@ -133,6 +142,7 @@ header {
     left: 0;
     display: flex;
     justify-content: space-around;
+    /*used to be center*/
     align-content: center;
     flex-wrap: wrap;
     background-color: white;
@@ -143,6 +153,9 @@ header {
 
 header a {
     width: 70vw;
+    /* max-height: 115px;
+    max-width: 480px; */
+    /* max-height: 40%; */
 }
 
 
@@ -157,7 +170,6 @@ header a img {
 
 header button:first-of-type img {
     width: 100%;
-    max-width: 50px;
     margin: auto;
 }
 
@@ -218,6 +230,7 @@ main {
 
 main img {
     width: 50%;
+    /* height: 100%; */
     align-self: flex-start;
 }
 
@@ -237,7 +250,6 @@ main img {
     background-color: rgba(253, 253, 253, 0.85);
     box-shadow: 0 0 8px rgba(47, 47, 47, 0.4);
     position: relative;
-    align-self: flex-start;
 }
 
 #zoom-btns button:first-of-type {
@@ -257,6 +269,7 @@ main img {
     width: 100vw;
     position: fixed;
     top: 15vh;
+    /*125px*/
     bottom: 0;
     justify-content: center;
     background-color: rgba(47, 47, 47, 0.6);
@@ -279,7 +292,7 @@ main img {
 }
 
 #tile-overlay figure {
-    height: 90vw;
+    height: 50%;
     margin: 30px 20px;
     align-self: center;
 }
@@ -359,8 +372,10 @@ main img {
 #team-overlay {
     width: 100vw;
     height: 100vh;
+    /*710px*/
     position: fixed;
     top: 0;
+    /*125px*/
     background-color: rgba(47, 47, 47, 0.6);
     display: none;
     z-index: 2;
@@ -371,6 +386,7 @@ main img {
     height: 80vh;
     position: relative;
     background-color: #fdfdfd;
+    /* margin: 0 auto; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -456,16 +472,6 @@ main img {
 /**** TABLET VIEW ****/
 
 @media only screen and (min-width: 700px) {
-
-    #welcome-overlay section>div,  #welcome-overlay section div img { 
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #welcome-overlay section div img {
-        display: block;
-    }
-
     header button {
         width: 10%;
         max-width: 100px;
@@ -474,12 +480,15 @@ main img {
     header button img {
         width: 100%;
     }
-    
+    /*  header a {
+        max-height: 115px;
+        max-width: 480px;
+    } */
     header a img {
         width: 100%;
     }
     header nav ul {
-        padding-left: 8%;
+        padding-left: 13%;
     }
     header nav ul li {
         height: 8.5vh;
@@ -488,7 +497,7 @@ main img {
         width: 12%;
     }
     #tile-overlay figure {
-        /* height: 70%; */
+        height: 70%;
         max-height: 70%;
     }
     #zoom-btns button {
@@ -503,7 +512,7 @@ main img {
 
 /**** DESKTOP VIEW ****/
 
-@media only screen and (min-width: 1366px) {
+@media only screen and (min-width: 1300px) {
     #welcome-overlay section {
         width: 100vw;
         height: 70vh;
@@ -523,29 +532,21 @@ main img {
         align-self: center;
         opacity: 1;
     }
-
-    #welcome-overlay section>img:first-of-type {
-        margin-left: auto;
-    }
-
-    #welcome-overlay section>img:last-of-type {
-        margin-right: auto;
-    }
-    
-
     #welcome-overlay section>img:last-of-type {
         display: block;
     }
     #welcome-overlay section div img {
         width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
-
     #welcome-btns {
         flex-wrap: nowrap;
         margin-top: 0;
     }
     header {
-        width: 10vw;
+        width: 40vw;
         height: 10vh;
         padding: 30px 0 0 30px;
         position: relative;
@@ -586,23 +587,18 @@ main img {
     header nav ul {
         padding-left: 2%;
     }
-    #container> a {
+    #container>a,
+    #container>img {
         display: block;
         position: fixed;
         bottom: 0;
         left: 0;
     }
-
-    #homeis-logo-tiles {
-        width: 20%;
+    #homeis-sticker-tiles {
+        width: 20vw;
         height: auto;
     }
-
-    #homeis-logo-tiles img {
-        width: 100%;
-    }
-
-    #homeis-logo {
+    #homeis-sticker {
         width: 15vw;
         height: 15vw;
     }
@@ -619,7 +615,6 @@ main img {
     }
     #zoom-btns button:first-of-type {
         margin-bottom: 3px;
-        background-color: rgba(128, 128, 128, 0.8);
     }
     #tile-overlay {
         margin-top: 0;
